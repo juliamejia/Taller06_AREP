@@ -1,0 +1,3 @@
+edu\escuelaing\arep\database\ConnectionMongoDB.class
+edu\escuelaing\arep\App.class
+edu\escuelaing\arep\entry\Message.class

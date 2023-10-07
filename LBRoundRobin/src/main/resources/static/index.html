@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+      <meta charset="utf-8" />
+      <meta http-equiv="x-ua-compatible" content="ie=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+      <title>Mensajes al instante</title>
+      <link rel="icon" href="favicon.png" />
+  </head>
+  <body onload="app.getMessages()">
+        
+        <h1 style="color :#2c3e42" >Mensajes</h1>
+        <div>
+        <h2 style="color :#2a3c41" >Ingrese mensaje:</h2>
+        <input type="text" placeholder="New message" id="message" >
+        <br><br>
+        <input id='boton-mensaje' type='button' onclick="app.addMessage()" value='Enviar mensaje' >
+        </div>
+        <br></br>
+        <div class="secciontable" >
+            <table  id="Table">
+                <tr>
+                    <th scope="col">MENSAJE</th>
+                    <th scope="col">FECHA</th>
+                </tr>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+      <script  type="text/javascript" src="js/app.js"></script>
+      <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+version: '2'
+
+services:
+
+    logservice1:
+        image: dockerservices:latest
+        container_name: logservice1
+        ports:
+            - "35001:6000"
+
+
+    logservice2:
+        image: dockerservices:latest
+        container_name: logservice2
+        ports:
+            - "35002:6000"
+
+
+    logservice3:
+        image: dockerservices:latest
+        container_name: logservice3
+        ports:
+            - "35003:6000"
+    roundrobin:
+        image: dockerrounr:latest
+        container_name: LBservice
+        ports:
+            - "35000:6000"
+        depends_on:
+            - "logservice1"
+            - "logservice2"
+            - "logservice3"
+        links:
+            - "logservice1"
+            - "logservice2"
+            - "logservice3"
